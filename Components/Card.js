@@ -5,8 +5,11 @@ import Color from "../Colors"
 const Card= props =>{
 return (
     <TouchableOpacity onPress={props.onPress}
+    disabled={props.disabled}
+   
     >
-<View style={styles.container}>
+<View style={{...styles.container, 
+backgroundColor:props.disabled? "#f6f7d7":Color.javascript}}>
     <Text> {props.title}</Text>
 </View>
 </TouchableOpacity>
@@ -19,7 +22,7 @@ const styles= StyleSheet.create({
         height:200 ,
         alignItems:"center",
         justifyContent:"center",
-        backgroundColor:Color.javascript,
+       
       margin:"5%",
       shadowColor: "black",
     shadowOffset: { width:0, hight: 2 },

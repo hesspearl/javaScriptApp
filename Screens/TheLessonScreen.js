@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React from "react";
 import {
   View,
   Dimensions,
@@ -7,18 +7,21 @@ import {
   Image,
   Text
 } from "react-native";
-import { ScrollView } from "react-native";
+import {HeaderButtons , Item} from 'react-navigation-header-buttons'
+import HeaderButton from "../Components/HeaderButton"
 
 const TheLessonScreen = props => {
   const DATA = props.navigation.getParam("data");
 
+  
+
   return (
     <FlatList
-      data={DATA}
+      data={DATA.body}
    
       style={styles.container}
       renderItem={({ item }) => {
-        console.log(item);
+
         return (
         
             <Image style={styles.img}
@@ -31,6 +34,21 @@ const TheLessonScreen = props => {
     />
   );
 };
+
+
+TheLessonScreen.navigationOptions= navData =>{
+    const title = navData.navigation.getParam("data")
+ 
+    return{ 
+        headerTitle:title.title,
+        headerRight: <HeaderButtons HeaderButtonComponent={HeaderButton} >
+     <Item title='Download'
+     iconName='download' 
+     onPress={()=>{}}
+     />
+   </HeaderButtons>}
+  }
+
 const dimensions = Dimensions.get("screen");
 const imageHeight = dimensions.height;
 const imageWidth = dimensions.width;
@@ -48,6 +66,7 @@ const styles = StyleSheet.create({
   }
   
 });
+
 
 export default TheLessonScreen;
 /*

@@ -1,8 +1,8 @@
 import React from 'react'
 import { View,FlatList, ScrollView, StyleSheet } from 'react-native';
 import Card from "../Components/Card"
-
 import {DATA} from "../data/lessons"
+
 
 const LessonScreen= props =>{
 return (
@@ -11,11 +11,11 @@ return (
    keyExtractor={item=> item.title}
     data={DATA}
     renderItem={(item)=>{
-     console.log(item)
+     console.log(item.item.disable)
      return <Card
-     
+     disabled={item.item.disable}
     title={item.item.title}
-    onPress={()=>props.navigation.navigate('Lesson', {data:item.item.body})}
+    onPress={()=>props.navigation.navigate('Lesson', {data:item.item})}
 />
 
 
@@ -35,5 +35,7 @@ const styles= StyleSheet.create({
      margin:10,
     }
 })
+
+
 
 export default LessonScreen;
