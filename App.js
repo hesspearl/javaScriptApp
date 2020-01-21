@@ -3,7 +3,16 @@ import {View,Text } from 'react-native';
 import * as Font from 'expo-font'
 import{AppLoading} from "expo"
 import LessonsNav from "./Navigations/LessonsNavigation"
+import {init} from "./storing/DB"
 
+/*
+
+init().then(()=>{
+  console.log("initialized data")
+})
+.catch(err=>{
+  console.log("failed"+err)
+})*/
 
 const fetchFonts=()=>{
   return Font.loadAsync({

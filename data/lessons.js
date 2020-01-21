@@ -10,7 +10,8 @@ export const DATA=[
     {
       title: "Introduce - التعريف",
       body:["https://i.ibb.co/NSHHwQr/lesson1.jpg"],
-      disable:false   },
+      disable:false ,
+    pdf:[""]  },
     {
         title: "Syntax- صيغة الجملة",
         body:["https://i.ibb.co/SJ0PV71/1.jpg",
@@ -23,8 +24,8 @@ export const DATA=[
       {
           title:"Variables- المتغيرات",
           body:[
-              "https://i.ibb.co/Z8HxqQ4/page0001.jpg",
-              "https://i.ibb.co/nQ3TdmS/page0002.jpg"
+            "https://i.ibb.co/Z8HxqQ4/page0001.jpg",
+            "https://i.ibb.co/nQ3TdmS/page0002.jpg"
           ],
           disable:false
       },
@@ -35,5 +36,5 @@ export const DATA=[
       }
 ];
 /*
-<a href="https://ibb.co/RQh1rbW"><img src="https://i.ibb.co/nQ3TdmS/page0002.jpg" alt="page0002" border="0"></a>
+
 */

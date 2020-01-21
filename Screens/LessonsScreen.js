@@ -4,6 +4,7 @@ import Card from "../Components/Card"
 import {DATA} from "../data/lessons"
 
 
+
 const LessonScreen= props =>{
 return (
     <FlatList
