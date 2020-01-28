@@ -11,11 +11,11 @@
     ],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/iconJS.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/splashJS.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#f7df1e"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -24,7 +24,13 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
-    }
+      "supportsTablet": true,
+      "config": {
+      "googleMobileAdsAppId":"ca-app-pub-6131682069999134~7558287945"
+    }},
+    "android":{
+      "config": {
+      "googleMobileAdsAppId":"ca-app-pub-6131682069999134~7558287945"
+    }}
   }
 }
