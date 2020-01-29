@@ -21,7 +21,7 @@ return (
   style={styles.container}>
   <PublisherBanner
   bannerSize="banner"
-  adUnitID="ca-app-pub-3940256099942544/6300978111"//"ca-app-pub-6131682069999134/9992879592" // Test ID, Replace with your-admob-unit-id
+  adUnitID="ca-app-pub-6131682069999134/9992879592" //"ca-app-pub-6131682069999134/9992879592" // Test ID, Replace with your-admob-unit-id
   onDidFailToReceiveAdWithError={bannerError}
  onAdViewDidReceiveAd = {bannerAdReceived}
   />

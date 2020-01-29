@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "js_learning",
-    "slug": "jsLearning",
+    "name": "js learning",
+    "slug": "js-Learning",
     "privacy": "public",
     "sdkVersion": "36.0.0",
     "platforms": [
@@ -24,11 +24,15 @@
       "**/*"
     ],
     "ios": {
+      "bundleIdentifier":"com.hesspearl.jsLearning",
+      "buildNumber":"1.0.0",
       "supportsTablet": true,
       "config": {
       "googleMobileAdsAppId":"ca-app-pub-6131682069999134~7558287945"
     }},
     "android":{
+      "package":"com.hesspearl.jsLearning",
+      "versionCode":1,
       "config": {
       "googleMobileAdsAppId":"ca-app-pub-6131682069999134~7558287945"
     }}

@@ -9,8 +9,10 @@ export const DATA=[
 export const DATA = [
   {
     title: "Introduce - التعريف",
-    body: ["https://i.ibb.co/tKQtDQB/58a603f9f99c3f02c3279920244c81cb-0.jpg",
-    "https://i.ibb.co/6ZCX0Rk/58a603f9f99c3f02c3279920244c81cb-1.jpg"
+    body: ["https://i.ibb.co/VCBr4Fz/3c7e9bbd9b4c49a6e1b772a970d17268-0.jpg",
+    "https://i.ibb.co/bvW9jHw/3c7e9bbd9b4c49a6e1b772a970d17268-1.jpg",
+    "https://i.ibb.co/FJwxb8c/3c7e9bbd9b4c49a6e1b772a970d17268-2.jpg" 
+    
    ],
     disable: false,
   
@@ -18,9 +20,12 @@ export const DATA = [
   {
     title: "Syntax- صيغة الجملة",
     body: [
-      "https://i.ibb.co/NK0hsB5/b14616f8d7e1de8adc08127cfd96313f-0.jpg",
-      "https://i.ibb.co/dDXm1G2/b14616f8d7e1de8adc08127cfd96313f-1.jpg",
-      "https://i.ibb.co/myzt9q4/b14616f8d7e1de8adc08127cfd96313f-2.jpg"
+      "https://i.ibb.co/DLwHfN2/8be2ca8efed63359e7986724cd785453-0.jpg",
+      "https://i.ibb.co/tXhCzV0/8be2ca8efed63359e7986724cd785453-1.jpg",
+      "https://i.ibb.co/dDSrTrp/8be2ca8efed63359e7986724cd785453-2.jpg" ,
+      "https://i.ibb.co/B66VYDD/8be2ca8efed63359e7986724cd785453-3.jpg",
+      "https://i.ibb.co/JQnv9NR/8be2ca8efed63359e7986724cd785453-4.jpg"
+
     ],
     disable: false
   },
@@ -28,17 +33,23 @@ export const DATA = [
   {
     title: "Variables- المتغيرات",
     body: [
-      "https://i.ibb.co/Z8HxqQ4/page0001.jpg",
-      "https://i.ibb.co/nQ3TdmS/page0002.jpg"
+      "https://i.ibb.co/KWkBYCk/fabc7eda860832e71d6b6d4648496cbf-0.jpg",
+      "https://i.ibb.co/X5VzGdy/fabc7eda860832e71d6b6d4648496cbf-1.jpg",
+      "https://i.ibb.co/L04NM2B/fabc7eda860832e71d6b6d4648496cbf-2.jpg"
     ],
     disable: false
   },
   {
     title: "Operators-العوامل المؤثرة ",
-    body: ["https://i.ibb.co/3vwvSCC/page0001.jpg",
-    "https://i.ibb.co/w7ppbjP/page0002.jpg",
-    "https://i.ibb.co/VS2vTXg/page0003.jpg" ,
-    "https://i.ibb.co/ckRhLgf/page0004.jpg"
+    body: [
+      "https://i.ibb.co/8DBZkrp/047af7a681a7d1866b2dd8ae0c01261c-0.jpg",
+      "https://i.ibb.co/VStz5DN/047af7a681a7d1866b2dd8ae0c01261c-1.jpg",
+      "https://i.ibb.co/GMFjyPL/047af7a681a7d1866b2dd8ae0c01261c-2.jpg" ,
+      "https://i.ibb.co/ysWTNHb/047af7a681a7d1866b2dd8ae0c01261c-3.jpg",
+      "https://i.ibb.co/80Msmt5/047af7a681a7d1866b2dd8ae0c01261c-4.jpg" ,
+      "https://i.ibb.co/M9xVw20/047af7a681a7d1866b2dd8ae0c01261c-5.jpg" ,
+      "https://i.ibb.co/rvwbMzd/047af7a681a7d1866b2dd8ae0c01261c-6.jpg"
+
   ],
     disable:  false
   },
@@ -46,52 +57,56 @@ export const DATA = [
   {
     title: "Function - الدوال",
     body: [
-      "https://i.ibb.co/qj5jk7j/page0001.jpg",
-      "https://i.ibb.co/CWFRrnt/page0002.jpg"
+      "https://i.ibb.co/fnVtqkw/a5e4f6bd87ae39344f4af8281a514693-0.jpg",
+
+      "https://i.ibb.co/Gxv5GZF/a5e4f6bd87ae39344f4af8281a514693-1.jpg",
+      "https://i.ibb.co/2FKVJz9/a5e4f6bd87ae39344f4af8281a514693-2.jpg",
+      "https://i.ibb.co/Bf0T0bz/a5e4f6bd87ae39344f4af8281a514693-3.jpg"
     ],
     disable:  false
   },
   {
     title: "Object - الكائنات ",
     body: [
-      "https://i.ibb.co/2F1SRBt/2159add5c7cdbbb7dddf99c6fb90f737-0.jpg",
-      "https://i.ibb.co/34DSgjm/2159add5c7cdbbb7dddf99c6fb90f737-1.jpg",
-      "https://i.ibb.co/6gDKZHn/2159add5c7cdbbb7dddf99c6fb90f737-2.jpg"
+      "https://i.ibb.co/6PDrqVK/7b9c7207a6dc4f227aaffc6bbb6d4c4a-0.jpg",
+      "https://i.ibb.co/QjzWfhQ/7b9c7207a6dc4f227aaffc6bbb6d4c4a-1.jpg",
+      "https://i.ibb.co/GQxpbbJ/7b9c7207a6dc4f227aaffc6bbb6d4c4a-2.jpg",
+      "https://i.ibb.co/6mJktGQ/7b9c7207a6dc4f227aaffc6bbb6d4c4a-3.jpg",
+      "https://i.ibb.co/JmLTfRy/7b9c7207a6dc4f227aaffc6bbb6d4c4a-4.jpg"
     ],
     disable:  false
   },
   {
     title: "Event- الحدث ",
     body: [
-      "https://i.ibb.co/WzMC48z/fdee950b75f02dcda72ff6c0a47202ba-0.jpg",
-      "https://i.ibb.co/brmfKtK/fdee950b75f02dcda72ff6c0a47202ba-1.jpg"
+      "https://i.ibb.co/grgFkZw/97247ac5bd6ecf205800caad6c8f7593-0.jpg",
+      "https://i.ibb.co/QHrrmsc/97247ac5bd6ecf205800caad6c8f7593-1.jpg",
+      "https://i.ibb.co/XS37wf9/97247ac5bd6ecf205800caad6c8f7593-2.jpg"
+
     ],
     disable:  false
   },
   {
     title: "Strings - سلاسل الكلمات ",
     body: [
-      "https://i.ibb.co/jwtX8RR/b8bbbc01751e27f97e84f6fe8d78bb5b-0.jpg",
-      "https://i.ibb.co/sy9LjXz/b8bbbc01751e27f97e84f6fe8d78bb5b-1.jpg"
+      "https://i.ibb.co/6DmNx0W/bd46df4170618c36eed51f5065b2f7a0-0.jpg",
+      "https://i.ibb.co/N6qf0zg/bd46df4170618c36eed51f5065b2f7a0-1.jpg",
+      "https://i.ibb.co/37Fdzcv/bd46df4170618c36eed51f5065b2f7a0-2.jpg",
+      "https://i.ibb.co/VDDpZPR/bd46df4170618c36eed51f5065b2f7a0-3.jpg"
+     
     ],
     disable: false
   },
   {
     title: "Numbers - الارقام",
-    body: ["https://i.ibb.co/5KmYv3b/0a0d9053f2040d920ad6a46136ef8817-0.jpg",
-    "https://i.ibb.co/VxqgJbr/0a0d9053f2040d920ad6a46136ef8817-1.jpg",
-    "https://i.ibb.co/0mYrT1L/0a0d9053f2040d920ad6a46136ef8817-2.jpg" 
+    body: [ 
   ],
     disable:  false
   },
   {
     title: "Array - المصفوفة",
     body: [
-      "https://i.ibb.co/vmQbntF/f5de6124b357a68ad97638524c5a1e7a-0.jpg",
-      "https://i.ibb.co/NZwthWQ/f5de6124b357a68ad97638524c5a1e7a-1.jpg" ,
-      "https://i.ibb.co/bKQJW4H/f5de6124b357a68ad97638524c5a1e7a-2.jpg",
-      "https://i.ibb.co/pP4BVhk/f5de6124b357a68ad97638524c5a1e7a-3.jpg" ,
-      "https://i.ibb.co/qxzPpYR/f5de6124b357a68ad97638524c5a1e7a-4.jpg"
+      
     ],
     disable: false
   },
@@ -123,7 +138,9 @@ export const DATA = [
 ];
 
 /*
-<a href="https://ibb.co/1Q75T7Z"><img src= alt="58a603f9f99c3f02c3279920244c81cb-0" border="0"></a>
-<a href="https://ibb.co/0Xbsyjx"><img src= alt="58a603f9f99c3f02c3279920244c81cb-1" border="0"></a>
+<a href="https://ibb.co/2cy5Q3k"><img src= alt="bd46df4170618c36eed51f5065b2f7a0-0" border="0"></a>
+<a href="https://ibb.co/qM8hHwL"><img src= alt="bd46df4170618c36eed51f5065b2f7a0-1" border="0"></a>
+<a href="https://ibb.co/JKptQHq"><img src= alt="bd46df4170618c36eed51f5065b2f7a0-2" border="0"></a>
+<a href="https://ibb.co/vmmvGKp"><img src= alt="bd46df4170618c36eed51f5065b2f7a0-3" border="0"></a>
 */
 

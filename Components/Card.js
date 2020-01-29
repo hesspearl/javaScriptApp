@@ -19,8 +19,8 @@ const Card = props => {
 
 const styles = StyleSheet.create({
   container: {
-    width: 150,
-    height: 200,
+    width: 120,
+    height: 180,
     alignItems: "center",
     justifyContent: "center",
 
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     borderRadius: 10
   },
   txt: {
-    fontFamily: "font",
+    fontFamily:"font-Regular",
     fontWeight: "bold",
     textAlign: "center",
     fontSize: 16

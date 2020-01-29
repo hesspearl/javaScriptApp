@@ -14,7 +14,7 @@ const TheLessonScreen = props => {
   const DATA = props.navigation.getParam("data");
 
   BackHandler.addEventListener("hardwareBackPress",async()=>{
-    AdMobInterstitial.setAdUnitID('ca-app-pub-3940256099942544/5224354917'
+    AdMobInterstitial.setAdUnitID('ca-app-pub-6131682069999134/9992879592'
      ); //  'ca-app-pub-6131682069999134/9992879592'
         
     try{
@@ -27,12 +27,20 @@ const TheLessonScreen = props => {
     }
   })
   return (
+    <View
+    style={{flex:1}}>
+    <PublisherBanner
+  bannerSize="banner"
+  adUnitID="ca-app-pub-6131682069999134/9992879592" //"ca-app-pub-6131682069999134/9992879592" // Test ID, Replace with your-admob-unit-id
+  onDidFailToReceiveAdWithError={bannerError}
+ onAdViewDidReceiveAd = {bannerAdReceived}
+  />
     <FlatList
       data={DATA.body}
       style={styles.container}
       renderItem={({ item }) => {
         return (
-          <View>
+          
             
             <Image
               style={styles.img}
@@ -40,11 +48,12 @@ const TheLessonScreen = props => {
               source={{ uri: item }}
             />
            
-          </View>
+  
         );
       }}
       keyExtractor={item => {}}
     />
+    </View>
   );
 };
 
@@ -79,7 +88,7 @@ TheLessonScreen.navigationOptions = navData => {
 
   return {
     headerTitle: data.title,
-    headerLeft:null
+   // headerLeft:null
   };
 };
 
@@ -91,8 +100,8 @@ const styles = StyleSheet.create({
   img: {
     width: imageWidth,
     height: imageHeight,
-    marginTop: -100,
-   marginBottom: -100
+  //  marginTop: -100,
+//   marginBottom: -100
   },
   container: {
     flex: 1

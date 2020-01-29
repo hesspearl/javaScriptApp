@@ -16,13 +16,14 @@ init().then(()=>{
 
 const fetchFonts=()=>{
   return Font.loadAsync({
-    'font': require('./assets/font/Katibeh-Regular.ttf')
+    'font-Regular': require('./assets/font/Changa-Regular.ttf')
   })
 }
 export default function App() {
  
  const [isLoading, setIsLoading] = useState(false)
 // fetch fonts before loading the screen
+
  if (!isLoading){
   return(
     <AppLoading
