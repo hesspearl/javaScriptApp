@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   View,
   Dimensions,
@@ -8,51 +8,35 @@ import {
   Alert,
   BackHandler
 } from "react-native";
-import { PublisherBanner,AdMobInterstitial } from "expo-ads-admob";
+import { PublisherBanner, AdMobInterstitial } from "expo-ads-admob";
+import { HeaderButtons, Item } from "react-navigation-header-buttons";
+import HeaderButton from "../Components/HeaderButton";
 
 const TheLessonScreen = props => {
   const DATA = props.navigation.getParam("data");
 
-  BackHandler.addEventListener("hardwareBackPress",async()=>{
-    AdMobInterstitial.setAdUnitID('ca-app-pub-6131682069999134/9992879592'
-     ); //  'ca-app-pub-6131682069999134/9992879592'
-        
-    try{
-      await AdMobInterstitial.requestAdAsync();
-      await AdMobInterstitial.showAdAsync();
-      props.navigation.goBack()
-    }
-    catch(e){
-      console.log(e);
-    }
-  })
   return (
-    <View
-    style={{flex:1}}>
-    <PublisherBanner
-  bannerSize="banner"
-  adUnitID="ca-app-pub-6131682069999134/9992879592" //"ca-app-pub-6131682069999134/9992879592" // Test ID, Replace with your-admob-unit-id
-  onDidFailToReceiveAdWithError={bannerError}
- onAdViewDidReceiveAd = {bannerAdReceived}
-  />
-    <FlatList
-      data={DATA.body}
-      style={styles.container}
-      renderItem={({ item }) => {
-        return (
-          
-            
+    <View style={{ flex: 1 }}>
+      <PublisherBanner
+        bannerSize="banner"
+        adUnitID="ca-app-pub-6131682069999134/9992879592" //"ca-app-pub-6131682069999134/9992879592" // Test ID, Replace with your-admob-unit-id
+        onDidFailToReceiveAdWithError={bannerError}
+        onAdViewDidReceiveAd={bannerAdReceived}
+      />
+      <FlatList
+        data={DATA.body}
+        style={styles.container}
+        renderItem={({ item }) => {
+          return (
             <Image
               style={styles.img}
               resizeMode="contain"
               source={{ uri: item }}
             />
-           
-  
-        );
-      }}
-      keyExtractor={item => {}}
-    />
+          );
+        }}
+        keyExtractor={item => {}}
+      />
     </View>
   );
 };
@@ -83,12 +67,34 @@ const downloadPDF =(url)=>{
   })
 } */
 
+const AdHandler = async props => {};
+
 TheLessonScreen.navigationOptions = navData => {
   const data = navData.navigation.getParam("data");
 
   return {
     headerTitle: data.title,
-   // headerLeft:null
+    headerLeft: () => (
+      <HeaderButtons HeaderButtonComponent={HeaderButton}>
+        <Item
+          title="return"
+          iconName={"back"}
+          onPress={async () => {
+            AdMobInterstitial.setAdUnitID(
+              'ca-app-pub-6131682069999134/9992879592'
+            ); //  'ca-app-pub-6131682069999134/9992879592'
+
+            try {
+              await AdMobInterstitial.requestAdAsync();
+              await AdMobInterstitial.showAdAsync();
+              navData.navigation.goBack();
+            } catch (e) {
+              console.log(e);
+            }
+          }}
+        />
+      </HeaderButtons>
+    )
   };
 };
 
@@ -99,9 +105,9 @@ const imageWidth = dimensions.width;
 const styles = StyleSheet.create({
   img: {
     width: imageWidth,
-    height: imageHeight,
-  //  marginTop: -100,
-//   marginBottom: -100
+    height: imageHeight
+    //  marginTop: -100,
+    //   marginBottom: -100
   },
   container: {
     flex: 1

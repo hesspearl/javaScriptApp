@@ -1,14 +1,16 @@
-import React from 'react'
-import { View,FlatList,SafeAreaView,  StyleSheet } from 'react-native';
+import React ,{ useEffect }from 'react'
+import { View,FlatList,SafeAreaView,  StyleSheet,  Alert , BackHandler} from 'react-native';
 import Card from "../Components/Card"
 import {DATA} from "../data/lessons"
-import {PublisherBanner, } from 'expo-ads-admob'
+import {PublisherBanner, AdMobInterstitial} from 'expo-ads-admob'
+
 
 
 
 const LessonScreen= props =>{
 
   
+
 
     bannerError = (err) => {
         console.log('banner ad not loading' + err)
