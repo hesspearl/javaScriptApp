@@ -11,6 +11,8 @@ import {
 import { PublisherBanner, AdMobInterstitial } from "expo-ads-admob";
 import { HeaderButtons, Item } from "react-navigation-header-buttons";
 import HeaderButton from "../Components/HeaderButton";
+import * as Localization from 'expo-localization';
+
 
 const TheLessonScreen = props => {
   const DATA = props.navigation.getParam("data");
@@ -72,6 +74,33 @@ const AdHandler = async props => {};
 TheLessonScreen.navigationOptions = navData => {
   const data = navData.navigation.getParam("data");
 
+  if(Localization.isRTL)
+  return{
+    headerTitle: data.title,
+    headerLeft:null,
+    headerRight: () => (
+      <HeaderButtons HeaderButtonComponent={HeaderButton}>
+        <Item
+          title="return"
+          iconName={"back"}
+          onPress={async () => {
+            AdMobInterstitial.setAdUnitID(
+              'ca-app-pub-6131682069999134/9992879592'
+            ); //  'ca-app-pub-6131682069999134/9992879592'
+
+            try {
+              await AdMobInterstitial.requestAdAsync();
+              await AdMobInterstitial.showAdAsync();
+              navData.navigation.goBack();
+            } catch (e) {
+              console.log(e);
+            }
+          }}
+        />
+      </HeaderButtons>
+    )
+  }
+
   return {
     headerTitle: data.title,
     headerLeft: () => (
@@ -105,8 +134,8 @@ const imageWidth = dimensions.width;
 const styles = StyleSheet.create({
   img: {
     width: imageWidth,
-    height: imageHeight
-    //  marginTop: -100,
+    height: imageHeight,
+     marginTop: -100,
     //   marginBottom: -100
   },
   container: {
