@@ -12,6 +12,7 @@ import { PublisherBanner, AdMobInterstitial } from "expo-ads-admob";
 import { HeaderButtons, Item } from "react-navigation-header-buttons";
 import HeaderButton from "../Components/HeaderButton";
 import * as Localization from 'expo-localization';
+import{} from 
 
 
 const TheLessonScreen = props => {
@@ -83,18 +84,19 @@ TheLessonScreen.navigationOptions = navData => {
         <Item
           title="return"
           iconName={"back"}
-          onPress={async () => {
-            AdMobInterstitial.setAdUnitID(
-              'ca-app-pub-6131682069999134/9992879592'
-            ); //  'ca-app-pub-6131682069999134/9992879592'
+          onPress={ () => {
+          /*  AdMobInterstitial.setAdUnitID(
+             
+"ca-app-pub-6131682069999134/1911850227"
+            ); //  ca-app-pub-6131682069999134/1911850227
 
             try {
               await AdMobInterstitial.requestAdAsync();
-              await AdMobInterstitial.showAdAsync();
+              await AdMobInterstitial.showAdAsync();*/
               navData.navigation.goBack();
-            } catch (e) {
+          /*  } catch (e) {
               console.log(e);
-            }
+            }*/
           }}
         />
       </HeaderButtons>
@@ -108,18 +110,18 @@ TheLessonScreen.navigationOptions = navData => {
         <Item
           title="return"
           iconName={"back"}
-          onPress={async () => {
-            AdMobInterstitial.setAdUnitID(
-              'ca-app-pub-6131682069999134/9992879592'
-            ); //  'ca-app-pub-6131682069999134/9992879592'
+          onPress={ () => {
+         /*   AdMobInterstitial.setAdUnitID(
+              'ca-app-pub-6131682069999134/1911850227'
+            ); //  ca-app-pub-6131682069999134/1911850227
 
             try {
               await AdMobInterstitial.requestAdAsync();
-              await AdMobInterstitial.showAdAsync();
+              await AdMobInterstitial.showAdAsync();*/
               navData.navigation.goBack();
-            } catch (e) {
+       /*     } catch (e) {
               console.log(e);
-            }
+            }*/
           }}
         />
       </HeaderButtons>
