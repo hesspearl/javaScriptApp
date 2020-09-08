@@ -17,26 +17,26 @@ init().then(()=>{
   console.log("failed"+err)
 })*/
 
-const fetchFonts=()=>{
-  return Font.loadAsync({
-    'font-Regular': require('./assets/font/Changa-Regular.ttf')
-  })
-}
-export default function App() {
+// const fetchFonts=()=>{
+//   return Font.loadAsync({
+//     'font-Regular': require('./assets/font/Changa-Regular.ttf')
+//   })
+// }
+ export default function App() {
  
-  i18n.locale= Localization.locale
+//   i18n.locale= Localization.locale
 
 
- const [isLoading, setIsLoading] = useState(false)
-// fetch fonts before loading the screen
+//  const [isLoading, setIsLoading] = useState(false)
+// // fetch fonts before loading the screen
 
- if (!isLoading){
-  return(
-    <AppLoading
-      startAsync={fetchFonts}
-      onFinish={setIsLoading(true)}
-    />)
- }
+//  if (!isLoading){
+//   return(
+//     <AppLoading
+//       startAsync={fetchFonts}
+//       onFinish={setIsLoading(true)}
+//     />)
+//  }
 
  // will be loaded after finish fetching fonts 
  return(

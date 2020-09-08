@@ -5,41 +5,47 @@ import {
   FlatList,
   StyleSheet,
   Image,
-  Alert,
+  ScrollView,
   BackHandler
 } from "react-native";
 import { PublisherBanner, AdMobInterstitial } from "expo-ads-admob";
 import { HeaderButtons, Item } from "react-navigation-header-buttons";
 import HeaderButton from "../Components/HeaderButton";
 import * as Localization from 'expo-localization';
-import{} from 
-
+import{} from "react-native-view-pdf"
+import { WebView } from 'react-native-webview';
 
 const TheLessonScreen = props => {
   const DATA = props.navigation.getParam("data");
 
   return (
-    <View style={{ flex: 1 }}>
+    <View style={{flex:1, }}>
       <PublisherBanner
         bannerSize="banner"
         adUnitID="ca-app-pub-6131682069999134/9992879592" //"ca-app-pub-6131682069999134/9992879592" // Test ID, Replace with your-admob-unit-id
         onDidFailToReceiveAdWithError={bannerError}
         onAdViewDidReceiveAd={bannerAdReceived}
       />
-      <FlatList
-        data={DATA.body}
-        style={styles.container}
-        renderItem={({ item }) => {
-          return (
-            <Image
+      <ScrollView style={styles.container}>
+      {DATA.body.map((item,index)=> (
+           <View 
+           key={index}
+           style={{margin:10, }}>
+              <Image
               style={styles.img}
-              resizeMode="contain"
+            
               source={{ uri: item }}
             />
-          );
-        }}
-        keyExtractor={item => {}}
-      />
+            </View>
+          )
+          )
+          }
+      </ScrollView>
+          
+       
+             
+          
+      
     </View>
   );
 };
@@ -72,76 +78,76 @@ const downloadPDF =(url)=>{
 
 const AdHandler = async props => {};
 
-TheLessonScreen.navigationOptions = navData => {
-  const data = navData.navigation.getParam("data");
+// TheLessonScreen.navigationOptions = navData => {
+//   const data = navData.navigation.getParam("data");
 
-  if(Localization.isRTL)
-  return{
-    headerTitle: data.title,
-    headerLeft:null,
-    headerRight: () => (
-      <HeaderButtons HeaderButtonComponent={HeaderButton}>
-        <Item
-          title="return"
-          iconName={"back"}
-          onPress={ () => {
-          /*  AdMobInterstitial.setAdUnitID(
+//   if(Localization.isRTL)
+//   return{
+//     headerTitle: data.title,
+//     headerLeft:null,
+//     headerRight: () => (
+//       <HeaderButtons HeaderButtonComponent={HeaderButton}>
+//         <Item
+//           title="return"
+//           iconName={"back"}
+//           onPress={ () => {
+//           /*  AdMobInterstitial.setAdUnitID(
              
-"ca-app-pub-6131682069999134/1911850227"
-            ); //  ca-app-pub-6131682069999134/1911850227
+// "ca-app-pub-6131682069999134/1911850227"
+//             ); //  ca-app-pub-6131682069999134/1911850227
 
-            try {
-              await AdMobInterstitial.requestAdAsync();
-              await AdMobInterstitial.showAdAsync();*/
-              navData.navigation.goBack();
-          /*  } catch (e) {
-              console.log(e);
-            }*/
-          }}
-        />
-      </HeaderButtons>
-    )
-  }
+//             try {
+//               await AdMobInterstitial.requestAdAsync();
+//               await AdMobInterstitial.showAdAsync();*/
+//               navData.navigation.goBack();
+//           /*  } catch (e) {
+//               console.log(e);
+//             }*/
+//           }}
+//         />
+//       </HeaderButtons>
+//     )
+//   }
 
-  return {
-    headerTitle: data.title,
-    headerLeft: () => (
-      <HeaderButtons HeaderButtonComponent={HeaderButton}>
-        <Item
-          title="return"
-          iconName={"back"}
-          onPress={ () => {
-         /*   AdMobInterstitial.setAdUnitID(
-              'ca-app-pub-6131682069999134/1911850227'
-            ); //  ca-app-pub-6131682069999134/1911850227
+//   return {
+//     headerTitle: data.title,
+//     headerLeft: () => (
+//       <HeaderButtons HeaderButtonComponent={HeaderButton}>
+//         <Item
+//           title="return"
+//           iconName={"back"}
+//           onPress={ () => {
+//          /*   AdMobInterstitial.setAdUnitID(
+//               'ca-app-pub-6131682069999134/1911850227'
+//             ); //  ca-app-pub-6131682069999134/1911850227
 
-            try {
-              await AdMobInterstitial.requestAdAsync();
-              await AdMobInterstitial.showAdAsync();*/
-              navData.navigation.goBack();
-       /*     } catch (e) {
-              console.log(e);
-            }*/
-          }}
-        />
-      </HeaderButtons>
-    )
-  };
-};
+//             try {
+//               await AdMobInterstitial.requestAdAsync();
+//               await AdMobInterstitial.showAdAsync();*/
+//               navData.navigation.goBack();
+//        /*     } catch (e) {
+//               console.log(e);
+//             }*/
+//           }}
+//         />
+//       </HeaderButtons>
+//     )
+//   };
+// };
 
 const dimensions = Dimensions.get("screen");
-const imageHeight = dimensions.height;
+const imageHeight = dimensions.height/1
 const imageWidth = dimensions.width;
 
 const styles = StyleSheet.create({
   img: {
-    width: imageWidth,
-    height: imageHeight,
-     marginTop: -100,
+    
+    height:700
+     
     //   marginBottom: -100
   },
   container: {
-    flex: 1
+  height:"100%"
   }
 });
 
